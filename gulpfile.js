@@ -21,5 +21,6 @@ var jssrc=[
     gulp.task('js',function() {
       gulp.src(jssrc)
         .pipe(concat('script.js'))
+        .pipe(browserify())
         .pipe(gulp.dest('builds/development/js'))
     });
